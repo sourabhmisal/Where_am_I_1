@@ -2,32 +2,29 @@
 <robot>
 
   <gazebo>
-    <!-- http://gazebosim.org/tutorials?tut=ros_gzplugins#SkidSteeringDrive -->
-    <plugin name="skid_steer_drive_controller" filename="libgazebo_ros_skid_steer_drive.so">
-      <updateRate>50.0</updateRate>
-      <robotNamespace>/</robotNamespace>
-      <leftFrontJoint>front_left_wheel_hinge</leftFrontJoint>
-      <rightFrontJoint>front_right_wheel_hinge</rightFrontJoint>
-      <leftRearJoint>back_left_wheel_hinge</leftRearJoint>
-      <rightRearJoint>back_right_wheel_hinge</rightRearJoint>
+    <plugin name="differential_drive_controller" filename="libgazebo_ros_diff_drive.so">
+      <legacyMode>false</legacyMode>
+      <alwaysOn>true</alwaysOn>
+      <updateRate>10</updateRate>
+      <leftJoint>left_wheel_hinge</leftJoint>
+      <rightJoint>right_wheel_hinge</rightJoint>
       <wheelSeparation>0.4</wheelSeparation>
       <wheelDiameter>0.2</wheelDiameter>
-      <robotBaseFrame>robot_footprint_1</robotBaseFrame>
-      <torque>20</torque>
+      <torque>10</torque>
       <commandTopic>cmd_vel</commandTopic>
       <odometryTopic>odom</odometryTopic>
       <odometryFrame>odom</odometryFrame>
       <robotBaseFrame>robot_footprint</robotBaseFrame>
-      <topicName>cmd_vel</topicName>
-      <broadcastTF>false</broadcastTF>
+      <publishWheelTF>false</publishWheelTF>
+      <publishWheelJointState>false</publishWheelJointState>
+      <rosDebugLevel>na</rosDebugLevel>
+      <wheelAcceleration>0</wheelAcceleration>
+      <wheelTorque>5</wheelTorque>
+      <odometrySource>world</odometrySource>
+      <publishTf>1</publishTf>
       <publishOdomTF>true</publishOdomTF>
-      <covariance_x>0.00001</covariance_x>
-      <covariance_y>0.00001</covariance_y>
-      <covariance_yaw>0.0001</covariance_yaw>
-      <publishWheelTF>true</publishWheelTF>  
     </plugin>
   </gazebo>
-
 
   <!-- camera -->
   <gazebo reference="camera">
@@ -100,23 +97,13 @@
   </gazebo>
 
 
-  <gazebo reference="front_left_wheel">
+  <gazebo reference="left_wheel">
     <material>Gazebo/Black</material>
   </gazebo>
 
-  <gazebo reference="back_left_wheel">
+  <gazebo reference="right_wheel">
     <material>Gazebo/Black</material>
   </gazebo>
-
-  <gazebo reference="front_right_wheel">
-    <material>Gazebo/Black</material>
-  </gazebo>
-
-  <gazebo reference="back_right_wheel">
-    <material>Gazebo/Black</material>
-  </gazebo>
-
-
 
   <gazebo reference="chassis">
     <material>Gazebo/Turquoise</material>
@@ -126,6 +113,10 @@
     <material>Gazebo/DarkYellow</material>
   </gazebo>
 
+  <gazebo reference="front_caster_visual">
+    <material>Gazebo/Indigo</material>
+  </gazebo>
 
+  
 
 </robot>
