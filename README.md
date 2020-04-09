@@ -35,9 +35,9 @@ Optional
 $ sudo apt-get install libignition-math2-dev protobuf-compiler 
 ```
 
-Create a new folder, say where_am_i_1 and clone this repository with `<git clone https://github.com/sourabhmisal/Where_am_I_1.git>` in the folder
+Create a new folder, say where_am_i_1 and clone this repository with ``` git clone https://github.com/sourabhmisal/Where_am_I_1.git ``` in the folder
 
-Go to the folder where_am_i_1 and execute these steps
+Go to the folder ` where_am_i_1 ` and execute these steps
 
 ```
 $ catkin_make
@@ -55,10 +55,10 @@ There are two methods to control the robot:
 
 2)   Teleop node : 
      
-     Make sure that teleop_twist_keyboard package is in your `<where_am_i_1/src>` directory.
-     Repo : `<https://github.com/ros-teleop/teleop_twist_keyboard>`
+     Make sure that teleop_twist_keyboard package is in your ` where_am_i_1/src ` directory.
+     Repo : ` https://github.com/ros-teleop/teleop_twist_keyboard `
      
-     To operate the robot via the keyboard, open a second terminal, go to the `<where_am_i_1>` directory, and execute:
+     To operate the robot via the keyboard, open a second terminal, go to the ` where_am_i_1 ` directory, and execute:
      ```
      $ source devel/setup.bash
      $ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
