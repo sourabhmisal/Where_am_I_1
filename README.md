@@ -1,6 +1,11 @@
 # Where_am_I_1
 Using ROS AMCL package to accurately localize a mobile robot inside a map in the Gazebo simulation environment. This project is tested on ROS kinetic
 
+Robot with particles associated with AMCL filter before navigation:
+![Screenshot](img/Robot_localisation_before_amcl.png)
+
+Robot with particles associated with AMCL filter after navigation:
+![Screenshot](img/Robot_localisation_after_amcl.png)
 
 ## Introduction
 This project is a part of Udacity's Robotics Software Engineering Nanodegree program. This is a basic template for localization using AMCL and can be used with readily available robots such as Kuka bot, etc
@@ -30,7 +35,7 @@ Optional
 $ sudo apt-get install libignition-math2-dev protobuf-compiler 
 ```
 
-Create a new folder, say where_am_i_1 and clone this repository with ```git clone https://github.com/sourabhmisal/Where_am_I_1.git``` in the folder
+Create a new folder, say where_am_i_1 and clone this repository with `<git clone https://github.com/sourabhmisal/Where_am_I_1.git>` in the folder
 
 Go to the folder where_am_i_1 and execute these steps
 
@@ -50,10 +55,10 @@ There are two methods to control the robot:
 
 2)   Teleop node : 
      
-     Make sure that teleop_twist_keyboard package is in your ```where_am_i_1/src``` directory.
-     Repo : ```https://github.com/ros-teleop/teleop_twist_keyboard```
+     Make sure that teleop_twist_keyboard package is in your `<where_am_i_1/src>` directory.
+     Repo : `<https://github.com/ros-teleop/teleop_twist_keyboard>`
      
-     To operate the robot via the keyboard, open a second terminal, go to the ```where_am_i_1``` directory, and execute:
+     To operate the robot via the keyboard, open a second terminal, go to the `<where_am_i_1>` directory, and execute:
      ```
      $ source devel/setup.bash
      $ rosrun teleop_twist_keyboard teleop_twist_keyboard.py
