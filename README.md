@@ -2,13 +2,13 @@
 Using ROS AMCL package to accurately localize a mobile robot inside a map in the Gazebo simulation environment. This project is tested on ROS kinetic
 
 Robot with particles associated with AMCL filter before navigation:
-![Screenshot](img/Robot_localisation_before_amcl.png)
+![Screenshot](img/Robot_localisation_1.png)
 
 Robot with particles associated with AMCL filter after navigation:
-![Screenshot](img/Robot_localisation_after_amcl.png)
+![Screenshot](img/Robot_localisation_2.png)
 
 ## Introduction
-This project is a part of Udacity's Robotics Software Engineering Nanodegree program. This is a basic template for localization using AMCL and can be used with readily available robots such as Kuka bot, etc
+This project is a part of Udacity's Robotics Software Engineering Nanodegree program. This is a basic template for localization using AMCL and can be used with readily available robots such as turtlebot, etc
 
 ## Project Aim :
 1)  Create a ROS package that launches a custom robot model in a custom Gazebo world.
@@ -45,7 +45,7 @@ $ source devel/setup.bash
 $ roslaunch my_robot world.launch
 ```
 
-This will initialize and run all the nodes. In Rviz, you see a red robot on a black and white map, surrounded by red arrows representing the particles associated with the AMCL filter.
+This will initialize and run all the nodes. In Rviz, you see a red robot on a colored map, surrounded by blue arrows representing the particles associated with the AMCL filter.
 
 There are two methods to control the robot:
 
